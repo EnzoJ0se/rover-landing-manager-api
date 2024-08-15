@@ -4,11 +4,11 @@ FROM node
 WORKDIR /app
 
 COPY package.json .
-COPY .env.docker .env
 
 RUN npm install
 
 COPY . ./
+COPY .env.docker ./.env
 
 EXPOSE 3000
 
