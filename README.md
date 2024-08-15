@@ -41,6 +41,17 @@ $ cp .env.example .env
 ```sh
 $ npm run dev
 ```
+### Run with Docker
+
+Run the following command to build the docker image:
+```sh
+npm run build-docker
+```
+
+To Execute the aplication execute the command:
+```sh
+npm run start-docker
+```
 
 ### Running the tests
 
