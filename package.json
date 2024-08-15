@@ -8,7 +8,9 @@
         "start": "node dist/api.js",
         "dev": "npm run lint && nodemon src/api.ts",
         "lint": "npx eslint src/**/*.ts",
-        "test": "jest"
+        "test": "jest",
+        "build-docker": "docker build -t \"rover-landing-manager-api\" .",
+        "start-docker": "docker-compose up"
     },
     "keywords": [],
     "author": "",
