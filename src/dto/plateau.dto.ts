@@ -3,13 +3,21 @@ export class PlateauDTO {
     public x_size: number;
     public y_size: number;
 
-    public static fromRequest(req: any): PlateauDTO {
+    public static fromRequest(req: any): PlateauDTO | string {
         if (!req?.x_size) {
-            throw new Error("x_size is required");
+            return "x_size is required";
         }
 
         if (!req?.y_size) {
-            throw new Error("y_size is required");
+            return "y_size is required";
+        }
+        
+        if (req.x_size <= 0) {
+            return "x_size must be greater than 0";
+        }
+
+        if (req.y_size <= 0) {
+            return "y_size must be greater than 0";
         }
 
         const plateau = new PlateauDTO();

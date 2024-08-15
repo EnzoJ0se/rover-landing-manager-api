@@ -5,7 +5,7 @@ import { CardinalDirectionEnum } from "../enums/cardinal-direction.enum";
 const roverSchema = new mongoose.Schema({
     x: { type: Number, required: true },
     y: { type: Number, required: true },
-    direction: { type: CardinalDirectionEnum, required: true },
+    direction: { type: typeof CardinalDirectionEnum, required: true },
 });
 
 const Rover = mongoose.model("Rover", roverSchema);
